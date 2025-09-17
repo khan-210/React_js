@@ -8,8 +8,11 @@ function App() {
 
   const addValue = () => {
     if (count < 20) {
-      count = count + 1;
-      setCount(count);
+      //  agar app ko aik click se 4 times ya 5 times value increase karn hai to ese karoge
+      setCount((prevCount) => prevCount + 1);
+      setCount((prevCount) => prevCount + 1);
+      setCount((prevCount) => prevCount + 1);
+      setCount((prevCount) => prevCount + 1);
     }
   };
   const removeValue = () => {
@@ -29,7 +32,7 @@ function App() {
       <button onClick={addValue}>Add Value</button>
       <br />
       <button onClick={removeValue}>Remove Value</button> <br />
-      <button onClick={reset}>Reset</button> 
+      <button onClick={reset}>Reset</button>
     </>
   );
 }
